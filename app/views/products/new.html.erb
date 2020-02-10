@@ -1,0 +1,9 @@
+<%= form_for @product do |f| %>
+  <%= f.text_field :name, placeholder: "Nombre del producto" %><br>
+  <br>
+  <%= f.text_field :price, placeholder: "Precio del Producto" %><br>
+  <br>
+    <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %><br>
+    <br>
+  <%= f.submit "Crear producto" %>
+<% end %>
